@@ -9,23 +9,20 @@
     - any pair of sides adding up to more than the length of the third side
     - the right thing to do for an invalid triangle would be to throw an exception.  If you don't know how to do that then just print a message
 
-1. Add a member function `get_area()` to calculate the area of the triangle.  This link details how to do that given only the three sides. https://www.cuemath.com/measurement/area-of-triangle-with-3-sides/.  To calculate the square root, place an import for the `math` module at the top of the file.
+1. Add a member function `get_perimiter()` to calculate the perimiter of the triangle.
 
-    `import math`
-    ...and then call `math.sqrt(x)` to compute the square root of x
-
-1. Write some test code to show that you can create triangles and compute their areas
+1. Write some test code to show that you can create triangles and compute their perimiters
 
 1. Print out the detail of a triangle, (all three sides and area).  Don't add a member function for this, write lines like:
-    - print(triangle1.slide1)
+    - print(triangle1.side1)
     - print(triangle1.get_area())
 
 1. Notice this is inconsistent syntax. To retrieve the area requires very different syntax (`get_area()`)
 
 1. Add a property definition for perimiter to the class
     `perimiter = property(get_perimiter)`
-(notice that you MUST NOT have parentheses after get_perimiter)
-1. Now find that you can access the attribute `perimiter` of the class *as if* it were simple read only data.  The property automates calling the `get_perimiter` function
+(notice that you MUST NOT have parentheses (like `()`) after get_perimiter)
+1. Now find that you can access the attribute `perimiter` of the class *as if* it were simple read only data.  The property automates calling the `get_perimiter` function, and returning its result
 
 ### Bonus Ideas
 
@@ -41,5 +38,5 @@ Add a `get_colour()` function and a `set_colour(newColour)` function to your cla
 Add a property for `colour` like this...
     `colour = property(get_colour, set_colour)`
 Retest your code.  Discover that you can still set `colour` (NOT `_colour` you should not touch that) to silly values
-1. In the `set_colour` function add protection code so that it will ONLY accept the colour values "Red", "Blue" "Green".  Again the right thing to do for an invalid value would be to throw an exception.  For now just print a message.
+1. In the `set_colour` function add protection code so that it will ONLY accept the colour values "Red", "Blue" "Green".  Again the right thing to do for an invalid value would be to throw an exception.  If you don't knwo how to do that just print a message.
 1. Discover that assignments to `colour` are now validated by the logic in `set_colour`

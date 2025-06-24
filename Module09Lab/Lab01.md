@@ -54,8 +54,8 @@ The lab doesn't implement the entire functionality, just a couple of useful part
 
 1. Once those tests pass for your split function...
 
-1. Write a test for a function that takes a list of words, and a number (the number of spaces required to separate the words of the line AND padd it to the required length).  
-    - You will notice that this is exactly what the previous funciton emits, but you should TEST THIS ONE INDEPENDANTLY
+1. Write a test for a function that takes a list of words, and a number (the number of spaces required to separate the words of the line AND pad it to the required length).  
+    - You will notice that this is exactly what the previous function emits, but you should TEST THIS ONE INDEPENDANTLY
     - Your test might look like this
     ```Python
    
