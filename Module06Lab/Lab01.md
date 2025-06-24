@@ -20,4 +20,10 @@ employee = (1011, "Bob", "Harris", "Programmer", 2001-05-01, 30000) - here the l
 1. Use a step to pick out all the odd subscripted items ie [1], [3], [5], etc
 
 1. Set up this string...
-    - `text = "The boy stood on the burning deck, Whence all but he had fled;"
+    - `text = "The boy stood on the burning deck Whence all but he had fled"
+    - use `string.split()` to separate the words into individual entries in a list
+
+    - Use the `input` function to have the user enter a word.  Display "Yes" if the user's word is present in the string.  HINT use the `in` operator to determine if an entry is present in the list
+
+    - modify your code such that the test is case IN-sensitive.  Ie if the user enters Whence, wHence, or WHENCE the program should report Yes for EACH of them
+    
