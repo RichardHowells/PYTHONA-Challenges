@@ -23,7 +23,7 @@ class Triangle(Shape):
         return self._colour
     
     def set_colour(self, newColour):
-        if newColour == 'Red' or newColour == "Blue" or newColour == "Green": 
+        if newColour in ['Red', "Blue", "Green"]: 
            self._colour = newColour
         else:
             raise ValueError("Invalid colour")
