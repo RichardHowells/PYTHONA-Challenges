@@ -6,18 +6,18 @@
 
     Your constructor should check for an invalid triangle:
     - negative side length
-    - any pair of sides adding up to more than the length of the third side
+    - any pair of sides adding up to less than the length of the third side
     - the right thing to do for an invalid triangle would be to throw an exception.  If you don't know how to do that then just print a message
 
-1. Add a member function `get_perimiter()` to calculate the perimiter of the triangle.
+1. Add a member function `get_perimiter(self)` to calculate the perimiter of the triangle.
 
 1. Write some test code to show that you can create triangles and compute their perimiters
 
-1. Print out the detail of a triangle, (all three sides and area).  Don't add a member function for this, write lines like:
+1. Print out the detail of a triangle, (all three sides and perimeter).  Don't add a member function for this, write lines like:
     - print(triangle1.side1)
-    - print(triangle1.get_area())
+    - print(triangle1.get_perimiter())
 
-1. Notice this is inconsistent syntax. To retrieve the area requires very different syntax (`get_area()`)
+1. Notice this is inconsistent syntax. To retrieve the area requires very different syntax (`get_perimiter(self)`)
 
 1. Add a property definition for perimiter to the class
     `perimiter = property(get_perimiter)`
@@ -34,9 +34,9 @@
 
 #### Make colour a property
 1. Change the name `colour` to `_colour` thoughout the class.  It is a python convention that leading underscore vaeibles are considered `private` and programmers using the class should NOT touch them.  It is just a convention the language does not enforce it.
-Add a `get_colour()` function and a `set_colour(newColour)` function to your class
+Add a `get_colour(self)` function and a `set_colour(self, newColour)` function to your class
 Add a property for `colour` like this...
     `colour = property(get_colour, set_colour)`
 Retest your code.  Discover that you can still set `colour` (NOT `_colour` you should not touch that) to silly values
-1. In the `set_colour` function add protection code so that it will ONLY accept the colour values "Red", "Blue" "Green".  Again the right thing to do for an invalid value would be to throw an exception.  If you don't knwo how to do that just print a message.
+1. In the `set_colour` function add protection code so that it will ONLY accept the colour values "Red", "Blue" "Green".  Again the right thing to do for an invalid value would be to throw an exception.  If you don't know how to do that just print a message.
 1. Discover that assignments to `colour` are now validated by the logic in `set_colour`

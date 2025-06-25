@@ -1,13 +1,16 @@
+
 class Triangle:
     def __init__(self, s1, s2, s3):
+        if s1 <= 0 or s2 <= 0 or s3 <=0:
+            raise ValueError("Illegal side value")
+        
+        if s1 > s2 + s3 or s2 > s1 + s2 or s3 > s1 + s2:
+            raise ValueError("These sides don't form a triangle")
+        
         self.s1 = s1
         self.s2 = s2
         self.s3 = s3
         self._colour = 'Black'
-
-    def get_area(self):
-        # Area calculation not implemeted
-        pass
 
     def get_perimiter(self):
         return self.s1 + self.s2 + self.s3
