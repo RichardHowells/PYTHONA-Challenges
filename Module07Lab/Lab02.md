@@ -20,11 +20,13 @@
     - note that when the module is imported all 'unenclosed code' (code not in a function) is executed hence the Hello message is seen when the import is executed
     - It's a bad practice to have unenclosed code in a module that gives an intrusive effect.  Ie don't print anything!
 
-1. Extend the module with a function that appends to a tuple. Tuples are immutable so you have to
+1. Extend the module with a function that expects a tuple and a newItem as parameters.  It appends to the tuple and then returns it. Tuples are immutable so you have to
     - convert the tuple to a list
     - append to the list
     - convert the list back to a new tuple
     - return the new tuple
+
+1. Add a call to the tupleExtender to test it
 
 1. Experiment with importing the module using an alias
     - `import functions as fns`
