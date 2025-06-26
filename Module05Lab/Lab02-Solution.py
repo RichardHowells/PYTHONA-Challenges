@@ -16,7 +16,7 @@ class Triangle(Shape):
         # Area calculation not implemeted
         pass
 
-    def get_perimiter(self):
+    def get_perimeter(self):
         return self.s1 + self.s2 + self.s3
     
     def get_colour(self):
@@ -28,7 +28,7 @@ class Triangle(Shape):
         else:
             raise ValueError("Invalid colour")
     
-    perimiter = property(get_perimiter)
+    perimeter = property(get_perimeter)
     colour = property(get_colour, set_colour)
 
 class Square(Shape):
@@ -37,23 +37,23 @@ class Square(Shape):
         self._height = height
         self._width = width
     
-    def get_perimiter(self):
+    def get_perimeter(self):
         return 2 * self._height + 2 * self._width
     
-    perimiter = property(get_perimiter)
+    perimeter = property(get_perimeter)
     
 
 t1 = Triangle(3, 4, 5, 100, 110)
-print(t1.s1, t1.s2, t1.s3, t1.get_perimiter())
+print(t1.s1, t1.s2, t1.s3, t1.get_perimeter())
 
-print(t1.s1, t1.s2, t1.s3, t1.perimiter, t1._x, t1._y)
+print(t1.s1, t1.s2, t1.s3, t1.perimeter, t1._x, t1._y)
 
 t1.colour = "Red"
 print(t1.colour)
 
 shapes = [ Triangle(2,2,3, 100, 110), Square(10,10, 110, 120)]
 for shape in shapes:
-    print(shape.perimiter)
+    print(shape.perimeter)
 
 # Moved to the very end as it raises an exception
 t1.colour = "dog"

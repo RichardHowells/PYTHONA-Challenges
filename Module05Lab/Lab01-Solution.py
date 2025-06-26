@@ -12,7 +12,7 @@ class Triangle:
         self.s3 = s3
         self._colour = 'Black'
 
-    def get_perimiter(self):
+    def get_perimeter(self):
         return self.s1 + self.s2 + self.s3
     
     def get_colour(self):
@@ -24,14 +24,15 @@ class Triangle:
         else:
             raise ValueError("Invalid colour")
     
-    perimiter = property(get_perimiter)
+    perimeter = property(get_perimeter)
     colour = property(get_colour, set_colour)
     
 
 t1 = Triangle(3, 4, 5)
-print(t1.s1, t1.s2, t1.s3, t1.get_perimiter())
+print(t1.s1, t1.s2, t1.s3, t1.get_perimeter())
 
-print(t1.s1, t1.s2, t1.s3, t1.perimiter)
+print(t1.s1, t1.s2, t1.s3, t1.perimeter)
+
 
 t1.colour = "Red"
 print(t1.colour)

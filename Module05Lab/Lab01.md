@@ -9,20 +9,20 @@
     - any pair of sides adding up to less than the length of the third side
     - the right thing to do for an invalid triangle would be to throw an exception.  If you don't know how to do that then just print a message
 
-1. Add a member function `get_perimiter(self)` to calculate the perimiter of the triangle.
+1. Add a member function `get_perimeter(self)` to calculate the perimeter of the triangle.
 
-1. Write some test code to show that you can create triangles and compute their perimiters
+1. Write some test code to show that you can create triangles and compute their perimeters
 
 1. Print out the detail of a triangle, (all three sides and perimeter).  Don't add a member function for this, write lines like:
     - print(triangle1.side1)
-    - print(triangle1.get_perimiter())
+    - print(triangle1.get_perimeter())
 
-1. Notice this is inconsistent syntax. To retrieve the area requires very different syntax (`get_perimiter(self)`)
+1. Notice this is inconsistent syntax. To retrieve the area requires very different syntax (`get_perimeter(self)`)
 
-1. Add a property definition for perimiter to the class
-    `perimiter = property(get_perimiter)`
-(notice that you MUST NOT have parentheses (like `()`) after get_perimiter)
-1. Now find that you can access the attribute `perimiter` of the class *as if* it were simple read only data.  The property automates calling the `get_perimiter` function, and returning its result
+1. Add a property definition for perimeter to the class
+    `perimeter = property(get_perimeter)`
+(notice that you MUST NOT have parentheses (like `()`) after get_perimeter)
+1. Now find that you can access the attribute `perimeter` of the class *as if* it were simple read only data.  The property automates calling the `get_perimeter` function, and returning its result
 
 ### Bonus Ideas
 

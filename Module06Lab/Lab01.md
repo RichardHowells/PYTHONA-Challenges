@@ -23,7 +23,7 @@ employee = (1011, "Bob", "Harris", "Programmer", 2001-05-01, 30000) - here the l
     - `text = "The boy stood on the burning deck Whence all but he had fled"
     - use `string.split()` to separate the words into individual entries in a list
 
-    - Use the `input` function to have the user enter a word.  Display "Yes" if the user's word is present in the string.  HINT use the `in` operator to determine if an entry is present in the list
+    - Use the `input` function to have the user enter a word.  Display "Yes" if the user's word is present in the string.  HINT use the `in` operator to determine if an entry is present in the list.  Print "No" if it is not in the list
 
     - modify your code such that the test is case IN-sensitive.  Ie if the user enters Whence, wHence, or WHENCE the program should report Yes for EACH of them
     
