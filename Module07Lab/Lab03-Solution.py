@@ -1,6 +1,6 @@
 import os
 
-# We user relative paths in this code.  
+# We use relative paths in this code.  
 # Before getting going let's just confirm the current working directory 
 print(os.getcwd())
 
@@ -15,6 +15,13 @@ file.close()
 print("\nJust the unique ones\n")
 # Display only unique items
 file = open(r"Module07Lab\employees.txt")
+
+import pathlib 
+my_file = pathlib.Path(r"Module07Lab\unique_employees.txt")
+if my_file.is_file():
+    print("I am about to nuke your file")
+
+
 output_file = open(r"Module07Lab\unique_employees.txt", "w")
 emp_nos = set()
 for line in file:

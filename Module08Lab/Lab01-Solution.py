@@ -7,12 +7,24 @@ cur = con.cursor()
 cur.execute("DROP TABLE IF EXISTS employee")
 
 # This line will crash if the database table is already present
-cur.execute("CREATE TABLE employee(name, DOB, payRate)")
+cur.execute("CREATE TABLE employee(name, DOB, itemsMade, payRate)")
 cur.execute("""
     INSERT INTO employee VALUES
-        ('Jemima Puddleduck', 2001, 0.5),
-        ('Rupert Bear', 1971, 0.4)
+        ('Jemima Puddleduck', 2001, 50, 0.5),
+        ('Rupert Bear', 1971, 100, 0.4)
 """)
+
 con.commit()
+
 res = cur.execute("SELECT * FROM employee")
 print(res.fetchall())
+
+res = cur.execute("SELECT * FROM employee")
+for row in res:
+    # This is a place where we get given a tuple for each row
+    # First unpack that into meaningful names
+    name, dob, itemsMade, payRate = row
+
+    basic_pay = itemsMade * payRate
+    
+    print(name, "is paid", basic_pay)

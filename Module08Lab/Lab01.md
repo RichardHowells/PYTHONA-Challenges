@@ -5,14 +5,15 @@ The Python environment is supplied from a package known as Anaconda.  Currently 
 1. Activate the environment
 
     - at a command prompt type
-    `anaconda3/scripts/activate` press return
+    `anaconda3\scripts\activate` press return
+    - WARNING, be sure to use '\' in the command.  This is one place where Windows is picky about the right type of slash
     - without this the sqlite3 environment won't work properly
 
 1. Sqlite3 is a lightweight database and is part of the Python standard library
 
 1. Paste this code into a python file
 
-    ```
+    ```Python
     import sqlite3
     con = sqlite3.connect("lab.db")
     cur = con.cursor()

@@ -404,3 +404,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+lab.db
+Module07Lab/unique_employees.txt
+lab.db
