@@ -15,10 +15,12 @@ file.close()
 print("\nJust the unique ones\n")
 # Display only unique items
 file = open(r"Module07Lab\employees.txt")
+output_file = open(r"Module07Lab\unique_employees.txt", "w")
 emp_nos = set()
 for line in file:
     if not line in emp_nos:
         emp_nos.add(line)
         print(line.strip())
+        output_file.write(line)
 
 file.close()
