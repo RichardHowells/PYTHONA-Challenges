@@ -17,7 +17,7 @@
     - print(triangle1.side1)
     - print(triangle1.get_perimeter())
 
-1. Notice this is inconsistent syntax. To retrieve the area requires very different syntax (`get_perimeter(self)`)
+1. Notice this is inconsistent syntax. To retrieve the perimeter requires very different syntax (`get_perimeter(self)`)
 
 1. Add a property definition for perimeter to the class
     `perimeter = property(get_perimeter)`
