@@ -33,7 +33,7 @@
     obviously dog is not a valid colour value
 
 #### Make colour a property
-1. Change the name `colour` to `_colour` thoughout the class.  It is a python convention that leading underscore vaeibles are considered `private` and programmers using the class should NOT touch them.  It is just a convention the language does not enforce it.
+1. Change the name `colour` to `_colour` thoughout the class.  It is a python convention that leading underscore variables are considered `private` and programmers using the class should NOT touch them.  It is just a convention, the language does not enforce it.
 Add a `get_colour(self)` function and a `set_colour(self, newColour)` function to your class
 Add a property for `colour` like this...
     `colour = property(get_colour, set_colour)`

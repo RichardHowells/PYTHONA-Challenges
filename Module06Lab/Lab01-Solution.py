@@ -1,4 +1,5 @@
 numbers = tuple(range(1, 21))
+
 print(numbers)
 
 print(numbers[0], numbers[-1])
@@ -18,16 +19,22 @@ print(evens, odds)
 text = "The boy stood on the burning deck Whence all but he had fled"
 
 #To make case insensitive...
-#text = text.lower()
+text = text.lower()
 
-print(text.split(" "))
+textWords = text.split(" ")
+
+# Convert the list into a set...
+textWords = set(textWords)
+print(textWords)
 
 desired = input("Give me a word :")
 
 #To make case insensitive...
-#desired = desired.lower()
+desired = desired.lower()
 
-if desired in text:
+if desired in textWords:
     print("Yes")
 else:
     print("No")
+
+
