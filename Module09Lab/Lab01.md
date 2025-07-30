@@ -2,9 +2,9 @@
 
 ## Flush printing text
 
-Newspapers and magazines oten print lines such that the first character aligns on the left margin and the last character aligns on the right margin.  With a fixed pitch font this is done by adding extra spaces between the words to push the rightmost character to the correct position.
+Newspapers and magazines often print lines such that the first character aligns on the left margin and the last character aligns on the right margin.  With a fixed pitch font this is done by adding extra spaces between the words to push the rightmost character to the correct position.
 
-Clearly it looks stupid to put (say) five spaces before the last word.  The (say) five spaces should be distributed, evenly as possible, into the gaps between the words on the line.  The process is a littel nore complex with variable pitch fonts, but the idea is the same
+Clearly it looks silly to put (say) five spaces before the last word.  The (say) five spaces should be distributed, evenly as possible, into the gaps between the words on the line.  The process is a little nore complex with variable pitch fonts, but the idea is the same
 
 The lab doesn't implement the entire functionality, just a couple of useful parts. You can complete it later if you like!
 
@@ -40,7 +40,7 @@ The lab doesn't implement the entire functionality, just a couple of useful part
     - this function should return BOTH the words, as a list, and the number of spaces to fill the line to the desired length
     - assert that the list of words contains the expected words
     - assert that the calculated number of spaces is correct
-    - Of course real life lines are mybe 80 characters long and have maybe ten plus words.  You should keep it simple, maybe three words.  Pick your own line length but it needs to be large enough for the words and the spaces...  Follow the pattern of the existing tests. Maybe
+    - Of course real life lines are maybe 80 characters long and have maybe ten plus words.  You should keep it simple, maybe three words.  Pick your own line length but it needs to be large enough for the words and the spaces...  Follow the pattern of the existing tests. Maybe
     ```Python
         def test_lineDecomposition(self):
             words, spaces = split_line_to_words_and_spaces("the..   boy", 12)
