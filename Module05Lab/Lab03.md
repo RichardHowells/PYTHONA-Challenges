@@ -1,6 +1,6 @@
 ## Lab03 Wireframe design
 
-> The default in FireBrand's teams installation is for students NOT to be able to share screens.  In case she/he forgets ask your instructor to make you all `presenters`.  (In the people view, right click and choose `make presenter`) 
+> The default in Firebrand's teams installation is for students NOT to be able to share screens.  In case she/he forgets ask your instructor to make you all `presenters`.  (In the people view, right click and choose `make presenter`) 
 
 Working in teams sketch out a user interface design for a Product Selling application
 
