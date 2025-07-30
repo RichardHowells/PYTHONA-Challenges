@@ -45,6 +45,7 @@ The Python environment is supplied from a package known as Anaconda.  Currently 
     - unpack the row into individual data items
     - use code like `name, dob, itemsMade, payRate = row`
 
-1. Experiment with using that data from the employee table to drive the calculation of employee pay that we did earlier in the course.
-    - you might try adding new columns to the table and allowing individual employees to have customised bonus rates, and bonus thresholds
+1. Experiment with using the data from the employee table to drive the calculation of employee pay that we did earlier in the course.
+    - you might try adding new columns to the table and allowing individual employees to have customised bonus rates, and bonus thresholds (to do this go back to the `CREATE TABLE` line in the code to add the extra columns.  In the `INSERT INTO...` line you will need to add extra data values for those columns)
+    - another thing you might try is to wrap the more complex payment logic into a function and into a module.  Import that module here to reuse the function.
 
