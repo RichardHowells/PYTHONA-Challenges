@@ -32,9 +32,9 @@ The lab doesn't implement the entire functionality, just a couple of useful part
     ```
 
 1. The short description of how it works...
-    - the `if __name__ == '__main__':` is a handy Python trick.  It is un-enclosed code so it runs if the module is executed stand alone, it is also executed if the module is imported.  It relies on Python behaviour that when a module runs stand-alone the special variable `__main__` is set to the magic value `'__main__'`.  Therefore this is essentially a test to determinie if the module is being run stand alone
+    - the `if __name__ == '__main__':` is a handy Python trick.  It is un-enclosed code so it runs if the module is executed stand alone, it is also executed if the module is imported.  It relies on Python behaviour that when a module runs stand-alone the special variable `__main__` is set to the magic value `'__main__'`.  Therefore this is a condition that determines if the module is being run stand alone
     - If it **is** being run stand alone then we call the main function in the testing package
-    - The testing package main function then finds classes that inherit from `unittest.TestCase` and executes all those member functions with names beginning with `test_`
+    - The testing package `main` function then finds classes that inherit from `unittest.TestCase` and executes all those member functions with names beginning with `test_`
 
 1. Start off by adding a test for a function that takes a string, (the text for the line), and an integer, (the intended length of the line).  
     - this function should return BOTH the words, as a list, and the number of spaces to fill the line to the desired length
