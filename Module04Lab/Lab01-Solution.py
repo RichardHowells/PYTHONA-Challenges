@@ -15,18 +15,20 @@ def basic_pay(rate_per_widget, quantity_made, enhancement_threshold = 35):
     return pay
 
 
+quantities = [30, 40, 50]
+
 print("Calling from for loop")
-for items in [30, 40, 50]:
-    print(basic_pay(0.5, items)) 
+for quantity in quantities:
+    print(basic_pay(0.5, quantity)) 
 
 print("Calling from list comprehension")
-print([basic_pay(0.5, items) for items in [30, 40, 50]])   
+print([basic_pay(0.5, quantity) for quantity in quantities])   
 
 def factorial(n):
     if n == 1:
         return 1
     else:
-        return n * factorial(n -1)
+        return n * factorial(n - 1)
     
 print(factorial(1))
 print(factorial(5))
