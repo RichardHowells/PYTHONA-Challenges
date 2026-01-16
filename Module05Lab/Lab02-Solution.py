@@ -3,7 +3,6 @@ class Shape:
         self._x = x
         self._y = y
 
-
 class Triangle(Shape):
     def __init__(self, s1, s2, s3, x, y):
         super().__init__(x,y)
@@ -31,7 +30,7 @@ class Triangle(Shape):
     perimeter = property(get_perimeter)
     colour = property(get_colour, set_colour)
 
-class Square(Shape):
+class Rectangle(Shape):
     def __init__(self, height, width, x, y):
         super().__init__(x, y)
         self._height = height
@@ -51,9 +50,13 @@ print(t1.s1, t1.s2, t1.s3, t1.perimeter, t1._x, t1._y)
 t1.colour = "Red"
 print(t1.colour)
 
-shapes = [ Triangle(2,2,3, 100, 110), Square(10,10, 110, 120)]
+shapes = [ Triangle(2,2,3, 100, 110), Rectangle(10,10, 110, 120)]
 for shape in shapes:
+    # We can access either the permitier property 
+    # or the get_perimiter method
     print(shape.perimeter)
+    print(shape.get_perimeter())
+
 
 # Moved to the very end as it raises an exception
 t1.colour = "dog"
