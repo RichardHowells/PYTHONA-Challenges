@@ -32,12 +32,16 @@ The lab doesn't implement the entire functionality, just a couple of useful part
     ```
 
 1. The short description of how it works...
-    - the `if __name__ == '__main__':` is a handy Python trick.  It is un-enclosed code so it runs if the module is executed stand alone, it is also executed if the module is imported.  It relies on Python behaviour that when a module runs stand-alone the special variable `__main__` is set to the magic value `'__main__'`.  Therefore this is a condition that determines if the module is being run stand alone
+    - the `if __name__ == '__main__':` is a handy Python trick.  It is un-enclosed code so it runs if the module is executed stand alone, it is also executed if the module is imported.  It relies on Python behaviour that when a module runs stand-alone the special variable `__name__` is set to the magic value `'__main__'`.  Therefore this is a condition that determines if the module is being run stand alone
     - If it **is** being run stand alone then we call the main function in the testing package
-    - The testing package `main` function then finds classes that inherit from `unittest.TestCase` and executes all those member functions with names beginning with `test_`
+    - The testing package's `main` function then finds classes that inherit from `unittest.TestCase` and executes all those member functions with names beginning with `test_`
+
+    - When imported to another module then the condition skips executing any of the tests
+
+    - This trick is handy as it allows the tests to stay with the implementation code. They are more likley to be kept up to date and less likely to be lost
 
 1. Start off by adding a test for a function that takes a string, (the text for the line), and an integer, (the intended length of the line).  
-    - this function should return BOTH the words, as a list, and the number of spaces to fill the line to the desired length
+    - this function should return BOTH the words, as a list, and the number of spaces to fill the line to the desired length. Simplest is to return a tuple `return (wordsList, requiredSpaces)`.  The caller can then sequence unpack that result `words, spaces = f(...)`
     - assert that the list of words contains the expected words
     - assert that the calculated number of spaces is correct
     - Of course real life lines are maybe 80 characters long and have maybe ten plus words.  You should keep it simple, maybe three words.  Pick your own line length but it needs to be large enough for the words and the spaces...  Follow the pattern of the existing tests. Maybe

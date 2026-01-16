@@ -1,6 +1,7 @@
 import unittest
 
 def split_line_to_words_and_spaces(line, width):
+
     words = line.split()
 
     totalOfWordLengths = 0
