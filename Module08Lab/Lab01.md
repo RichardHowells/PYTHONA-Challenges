@@ -4,7 +4,7 @@ The Python environment is supplied from a package known as Anaconda.  Currently 
 
 1. Activate the environment
 
-    - You HAVE TO follw these steps exactly
+    - You HAVE TO follow these steps exactly
     - Close ALL VS code windows
     - From the windows start button, find and launch a command prompt.  Type `command` into the search bar and that should lead you to it
     - type the command `anaconda3\scripts\activate` press return

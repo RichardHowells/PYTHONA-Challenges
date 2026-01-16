@@ -19,7 +19,8 @@ con.commit()
 res = cur.execute("SELECT * FROM employee")
 print(res.fetchall())
 
-res = cur.execute("SELECT * FROM employee")
+# It's a best practice to specify just the columns you actually want
+res = cur.execute("SELECT name, DOB, itemsMade, payRate FROM employee")
 for row in res:
     # This is a place where we get given a tuple for each row
     # First unpack that into meaningful names
