@@ -1,3 +1,11 @@
+"""
+Docstring for Module06Lab.Lab01-Solution
+
+This is a sample code from the python course
+"""
+
+
+
 numbers = tuple(range(1, 21))
 
 print(numbers)
@@ -10,8 +18,8 @@ last_ten = numbers[10:]
 
 print(first_ten, last_ten)
 
-evens = numbers[1::2]
-odds = numbers[0::2]
+evens = numbers[0::2]
+odds = numbers[1::2]
 print(evens, odds)
 
 
@@ -19,7 +27,7 @@ print(evens, odds)
 text = "The boy stood on the burning deck Whence all but he had fled"
 
 # To make case insensitive...
-#text = text.lower()
+text = text.lower()
 
 textWords = text.split(" ")
 
@@ -37,4 +45,28 @@ if desired in textWords:
 else:
     print("No")
 
+# Count word occurrences
 
+wordlist = ["the", "cat", "sat", "sat", "sat", "on", "the", "mat"]
+
+wordCounts = dict()
+for word in wordlist:
+    if word in wordCounts:
+        wordCounts[word] = wordCounts[word] + 1
+    else:
+        wordCounts[word] = 1
+
+print(wordCounts)
+
+wordCounts = dict()
+for word in wordlist:
+    count = wordCounts.get(word, 0)
+    wordCounts[word] = count + 1
+
+print(wordCounts)
+
+import collections
+
+wordCounts = collections.Counter(wordlist)
+
+print(wordCounts)
