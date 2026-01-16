@@ -31,3 +31,10 @@ for line in file:
         output_file.write(line)
 
 file.close()
+
+# Demonstrate picking up values from the command line
+# Such values can be used as file names, switches, etc
+# (and it's probably best to use a library to handle them)
+
+import sys
+print(sys.argv)
