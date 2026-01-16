@@ -12,7 +12,7 @@ You will want a loop to generate the basic numbers.  Create versions
 - using `while` for the loop
 - using `for` and `range` for the loop
 
-Inside the loop you will want `if` statements to determine when to output the words fizz/buzz/fizzbuzz.  Create versions with
+Inside the loop you will want `if` statements to determine when to output the words fizz/buzz/fizzbuzz.  You also want a way to test the division.  The % operator will give the remainder after an integer division.  Try versions with
 - three independent `if` statements
 - a cascade of `if`/`else` statements
 
