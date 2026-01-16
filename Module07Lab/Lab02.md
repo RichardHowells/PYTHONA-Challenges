@@ -27,7 +27,7 @@
     - convert the list back to a new tuple
     - return the new tuple
 
-1. Add a call to the `tupleExtender` to test it
+1. Add a call to `tupleExtender` to test it
 
 1. Experiment with importing the module using an alias
     - `import functions as fns`
