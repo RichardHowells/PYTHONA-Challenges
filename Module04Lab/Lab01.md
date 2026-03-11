@@ -14,7 +14,10 @@ Try repeating that logic as a list comprehension
 
 ### Bonus steps
 
-Make your function more flexible. Take in the threshold for enhanced pay (35) as another parameter.  Set this parameter to default to 35 if unspecified.  So your existing test code does not require change.
+Make your function more flexible. Take in the threshold for enhanced pay (35) as another parameter.  Set this parameter to default to 35 if unspecified.  So your existing test code does not require change.  Specifying a default parameter value is easy.  To specify a default for `enhancement_threshold` use somthing like...
+
+`def basic_pay(rate_per_widget, quantity_made, enhancement_threshold = 35):
+`
 
 Get this working first.  THEN try it with a specified value for the enhanced payment
 
