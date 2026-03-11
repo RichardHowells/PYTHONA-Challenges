@@ -8,6 +8,10 @@ Go back to your code for Jemima's payment calculation
 
 Extract the payment calculation into a function.  Your function should take in rate_per_widget and quantity_made.  It should return the calculated pay
 
+Call this function from a `for` loop that iterates over a list containing the quantities that Jemima makes
+
+Try repeating that logic as a list comprehension
+
 ### Bonus steps
 
 Make your function more flexible. Take in the threshold for enhanced pay (35) as another parameter.  Set this parameter to default to 35 if unspecified.  So your existing test code does not require change.
