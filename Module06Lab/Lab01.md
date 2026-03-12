@@ -32,4 +32,18 @@ employee = (1011, "Bob", "Harris", "Programmer", 2001-05-01, 30000) - here the l
     - convert the `list` into a `set`
     - the checking code should still work unchanged
     - it will not be noticable for this small volume of data, but the lookup test would be faster for large volumes of data
+
+1. Bonus ideas 2 ...
+    - write a word counting program
+    - start with say
+    ```
+    wordlist = ["the", "cat", "sat", "sat", "sat", "on", "the", "mat"]
+    ```
+    - use a dictionary to store a count against each word
+    - add a previously unseen word to the dictionary with a count zero
+    - for a previously seen word increment its count
+
+1. Bonus idea 3
+    - although we have not used library modules yet, look up the documentation for `collections.Counter`. It is intended to solve this exact problem
+    
     
