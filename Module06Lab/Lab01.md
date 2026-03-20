@@ -40,7 +40,7 @@ employee = (1011, "Bob", "Harris", "Programmer", 2001-05-01, 30000) - here the l
     wordlist = ["the", "cat", "sat", "sat", "sat", "on", "the", "mat"]
     ```
     - use a dictionary to store a count against each word
-    - add a previously unseen word to the dictionary with a count zero
+    - add a previously unseen word to the dictionary with a count of 1
     - for a previously seen word increment its count
 
 1. Bonus idea 3
