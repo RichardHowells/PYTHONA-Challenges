@@ -45,7 +45,7 @@ def distribute_spaces_at_end(words, spaces):
         return words[0] + " " * spaces    
     
 
-class TestAddFunction(unittest.TestCase):
+class TestLineJustification(unittest.TestCase):
     def test_lineDecomposition(self):
 
         words, spaces = split_line_to_words_and_spaces("the..   boy", 12)
