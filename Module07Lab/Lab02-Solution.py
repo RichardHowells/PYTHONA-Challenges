@@ -10,6 +10,10 @@ print(Lab02Functions.tupleAppender((1, 2, 3), "fred"))
 import Lab02Functions as fns
 print(fns.square(99))
 
+# The second import, with the alias, does not hide the first import
+# This still works
+print(Lab02Functions.square(99))
+
 # Note these subsequent imports do NOT print the message from Lab02Functions 
 from Lab02Functions import square
 print(square(99))
