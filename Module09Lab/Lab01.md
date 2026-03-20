@@ -34,7 +34,7 @@ The lab doesn't implement the entire functionality, just a couple of useful part
 1. The short description of how it works...
     - the `if __name__ == '__main__':` is a handy Python trick.  It is un-enclosed code so it runs if the module is executed stand alone, it is also executed if the module is imported.  It relies on Python behaviour that when a module runs stand-alone the special variable `__name__` is set to the magic value `'__main__'`.  Therefore this is a condition that determines if the module is being run stand alone
     - If it **is** being run stand alone then we call the main function in the testing package
-    - The testing package's `main` function then finds classes that inherit from `unittest.TestCase` and executes all those member functions with names beginning with `test_`
+    - The testing package's `main` function automatically finds classes that inherit from `unittest.TestCase` and executes all the member functions with names beginning with `test_`
 
     - When imported to another module then the condition skips executing any of the tests
 
