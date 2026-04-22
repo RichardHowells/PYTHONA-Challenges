@@ -29,3 +29,11 @@ for row in res:
     basic_pay = itemsMade * payRate
     
     print(name, "is paid", basic_pay)
+
+
+print("Using a list comprehension...")
+# The result is an iterable so...
+res = cur.execute("SELECT name, DOB, itemsMade, payRate FROM employee")
+# It can be used in a comprehension.  This is a list comprehension.
+# A generator object would also work
+print([(name, payRate * itemsMade) for name, dob, itemsMade, payRate in res])
