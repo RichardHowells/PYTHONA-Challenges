@@ -52,7 +52,7 @@ print(t1.colour)
 
 shapes = [ Triangle(2,2,3, 100, 110), Rectangle(10,10, 110, 120)]
 for shape in shapes:
-    # We can access either the permitier property 
+    # We can access either the perimiter property 
     # or the get_perimiter method
     print(shape.perimeter)
     print(shape.get_perimeter())

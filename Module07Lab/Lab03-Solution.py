@@ -16,7 +16,6 @@ print("\nJust the unique ones\n")
 # Display only unique items
 with open(r"Module07Lab\employees.txt") as file:
 
-
     import pathlib 
     my_file = pathlib.Path(r"Module07Lab\unique_employees.txt")
     if my_file.is_file():
