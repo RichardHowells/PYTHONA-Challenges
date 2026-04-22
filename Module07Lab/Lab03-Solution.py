@@ -14,23 +14,21 @@ file.close()
 
 print("\nJust the unique ones\n")
 # Display only unique items
-file = open(r"Module07Lab\employees.txt")
-
-import pathlib 
-my_file = pathlib.Path(r"Module07Lab\unique_employees.txt")
-if my_file.is_file():
-    print("I am about to nuke your file")
+with open(r"Module07Lab\employees.txt") as file:
 
 
-output_file = open(r"Module07Lab\unique_employees.txt", "w")
-emp_nos = set()
-for line in file:
-    if not line in emp_nos:
-        emp_nos.add(line)
-        print(line.strip())
-        output_file.write(line)
+    import pathlib 
+    my_file = pathlib.Path(r"Module07Lab\unique_employees.txt")
+    if my_file.is_file():
+        print("I am about to nuke your file")
 
-file.close()
+    with open(r"Module07Lab\unique_employees.txt", "w") as output_file:
+        emp_nos = set()
+        for line in file:
+            if not line in emp_nos:
+                emp_nos.add(line)
+                print(line.strip())
+                output_file.write(line)
 
 # Demonstrate picking up values from the command line
 # Such values can be used as file names, switches, etc
