@@ -4,7 +4,7 @@
 
 There is a popular children's game Fizz Buzz.  The concept is easy a group of kids take turns to count ascending numbers... 1, 2, 3, 4, etc.  The twist is that every multiple of three is replaced by the word 'Fizz' and every multiple of five is replaced by the word 'Buzz'.  A multiple of both is replaced by 'Fizz Buzz'
 
-So 1, 2, Fizz, 4, Buzz, Fizz... 8, Fizz, Fizz Buzz, 11...
+So 1, 2, Fizz, 4, Buzz, Fizz...     14, Fizz Buzz, 16, 17, Fizz, ...
 
 1. Write a program to generate the correct results for numbers up to 20 (that's about as many as can fit on a screen)
 
