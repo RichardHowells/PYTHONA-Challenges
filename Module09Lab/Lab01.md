@@ -38,7 +38,7 @@ The lab doesn't implement the entire functionality, just a couple of useful part
 
     - When imported to another module then the condition skips executing any of the tests
 
-    - This trick is handy as it allows the tests to stay with the implementation code. They are more likley to be kept up to date and less likely to be lost
+    - This trick is handy as it allows the tests to stay with the implementation code. They are more likely to be kept up to date and less likely to be lost
 
 1. Start off by adding a test for a function that takes a string, (the text for the line), and an integer, (the intended length of the line).  
     - this function should return BOTH the words, as a list, and the number of spaces to fill the line to the desired length. Simplest is to return a tuple `return (wordsList, requiredSpaces)`.  The caller can then sequence unpack that result `words, spaces = f(...)`
