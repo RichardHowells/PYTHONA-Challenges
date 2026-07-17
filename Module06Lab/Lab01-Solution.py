@@ -1,10 +1,3 @@
-"""
-Docstring for Module06Lab.Lab01-Solution
-
-This is a sample code from the python course
-"""
-
-
 
 numbers = tuple(range(1, 21))
 
