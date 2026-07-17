@@ -17,3 +17,10 @@ print(Lab02Functions.square(99))
 # Note these subsequent imports do NOT print the message from Lab02Functions 
 from Lab02Functions import square
 print(square(99))
+
+
+print("Docstring for Lab02Functions")
+print(Lab02Functions.__doc__)
+
+print("Docstring for Lab02Functions.square")
+print(Lab02Functions.square.__doc__)
