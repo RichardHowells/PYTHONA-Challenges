@@ -1,4 +1,5 @@
 
+print("build the message as a string")
 
 for i in range(0,21):
     message = ''
@@ -11,6 +12,22 @@ for i in range(0,21):
 
     if message != "":
         print(message)
+    else:
+        print(i)
+
+print("Use print's ability to remain on the current line")
+for i in range(0,21):
+    if i % 3 == 0:
+        print("Fizz ", end="")
+
+    if i % 5 == 0:
+        print("Buzz ", end="")
+    
+    # With this technique the modulus tests are repeated because
+    # we have to decide if the print line is completed
+    # It's a risk to have repeated code
+    if i % 3 == 0 or i % 5 == 0:
+        print("")
     else:
         print(i)
 
