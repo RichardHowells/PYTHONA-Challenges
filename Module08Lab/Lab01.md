@@ -49,3 +49,22 @@ The Python environment is supplied from a package known as Anaconda.  Currently 
     - you might try adding new columns to the table and allowing individual employees to have customised bonus rates, and bonus thresholds (to do this go back to the `CREATE TABLE` line in the code to add the extra columns.  In the `INSERT INTO...` line you will need to add extra data values for those columns)
     - another thing you might try is to wrap the more complex payment logic into a function and into a module.  Import that module here to reuse the function.
 
+## Bonus ideas
+
+1. Just like a file, this code **should** close the connection object and the cursor object when it no longer needs them.  You could just add `.close()` calls
+
+1. More sophisticated is to use a context manager.  Context managers interoperate with the Python `with` statement.  The `with` statement automates closing both at the end of the block **and** in the event of an exception
+
+1. Adjust the connection creation to look like
+    ```Python
+    with contextlib.closing(sqlite3.connect("lab.db")) as con:
+    ```
+    you will need an `import contextlib` and you will need to indent all the following code
+
+1. Simlarly adjust the cusor creation to look like
+    ```Python
+        with contextlib.closing(con.cursor()) as cur:
+    ```
+    you will need to indent all the following code
+
+    **NOTE** The context manager requires a specific set of methods to do its work.  Known as the protocol.  The file object implements that protocol directly, which is why we could use file objects directly in the `with` statement.  The `sqlite3` objects don't follow that protocol to close the connection/cursor objects.  The `contextlib.closing` function wraps those objects to automate the `.close()` calls.  For further information see https://blog.rtwilson.com/a-python-sqlite3-context-manager-gotcha/ 

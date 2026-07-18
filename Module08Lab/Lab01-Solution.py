@@ -1,39 +1,45 @@
+import contextlib
 import sqlite3
-con = sqlite3.connect("lab.db")
-cur = con.cursor()
+with contextlib.closing(sqlite3.connect("lab.db")) as con:
 
-# This line will get rid of the table. 
-# it will NOT crash if the table is missing
-cur.execute("DROP TABLE IF EXISTS employee")
+    with contextlib.closing(con.cursor()) as cur:
 
-# This line will crash if the database table is already present
-cur.execute("CREATE TABLE employee(name, DOB, itemsMade, payRate)")
-cur.execute("""
-    INSERT INTO employee VALUES
-        ('Jemima Puddleduck', 2001, 50, 0.5),
-        ('Rupert Bear', 1971, 100, 0.4)
-""")
+        # This line will get rid of the table. 
+        # it will NOT crash if the table is missing
+        cur.execute("DROP TABLE IF EXISTS employee")
 
-con.commit()
-
-res = cur.execute("SELECT * FROM employee")
-print(res.fetchall())
-
-# It's a best practice to specify just the columns you actually want
-res = cur.execute("SELECT name, DOB, itemsMade, payRate FROM employee")
-for row in res:
-    # This is a place where we get given a tuple for each row
-    # First unpack that into meaningful names
-    name, dob, itemsMade, payRate = row
-
-    basic_pay = itemsMade * payRate
-    
-    print(name, "is paid", basic_pay)
+        # This line will crash if the database table is already present
+        cur.execute("CREATE TABLE employee(name, DOB, itemsMade, payRate)")
 
 
-print("Using a list comprehension...")
-# The result is an iterable so...
-res = cur.execute("SELECT name, DOB, itemsMade, payRate FROM employee")
-# It can be used in a comprehension.  This is a list comprehension.
-# A generator object would also work
-print([(name, payRate * itemsMade) for name, dob, itemsMade, payRate in res])
+
+
+        cur.execute("""
+            INSERT INTO employee VALUES
+                ('Jemima Puddleduck', 2001, 50, 0.5),
+                ('Rupert Bear', 1971, 100, 0.4)
+        """)
+
+        con.commit()
+
+        res = cur.execute("SELECT * FROM employee")
+        print(res.fetchall())
+
+        # It's a best practice to specify just the columns you actually want
+        res = cur.execute("SELECT name, DOB, itemsMade, payRate FROM employee")
+        for row in res:
+            # This is a place where we get given a tuple for each row
+            # First unpack that into meaningful names
+            name, dob, itemsMade, payRate = row
+
+            basic_pay = itemsMade * payRate
+            
+            print(name, "is paid", basic_pay)
+
+
+        print("Using a list comprehension...")
+        # The result is an iterable so...
+        res = cur.execute("SELECT name, DOB, itemsMade, payRate FROM employee")
+        # It can be used in a comprehension.  This is a list comprehension.
+        # A generator object would also work
+        print([(name, payRate * itemsMade) for name, dob, itemsMade, payRate in res])
